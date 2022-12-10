@@ -3,33 +3,37 @@ import network
 import uctypes
 import socket
 import binascii
+import micropython
+import sys
 from lib import *
 
-ssid = "SkyEcho_8189"
-pwd = ""
+OWNSHIP_ID = 0xA
+TRAFFIC_ID = 0x14
 
-sta_if = network.WLAN(network.STA_IF)
-if not sta_if.isconnected():
-    print('connecting to network...')
-    sta_if.active(True)
-    sta_if.connect(ssid, pwd)
-    while not sta_if.isconnected():
-        pass
-print('network config:', sta_if.ifconfig())
+OWNSHIP_POPULATED_FLAG = False
 
-addr_info = socket.getaddrinfo(sta_if.ifconfig()[0], 4000)
-addr = addr_info[0][-1]
+skyecho_ssid = "SkyEcho_8189"
+skyecho_pwd = ""
 
-s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
-s.bind(addr)
+config_ap_ssid = "ADSB2Flarm"
 
 # Define CRC struct
-crc_data = bytes(uctypes.sizeof(CRC,uctypes.LITTLE_ENDIAN))
-crc_data = uctypes.struct(uctypes.addressof(crc_data),CRC,uctypes.LITTLE_ENDIAN)
+crc_data = bytes(uctypes.sizeof(CRC_STRUCT,uctypes.LITTLE_ENDIAN))
+crc_data = uctypes.struct(uctypes.addressof(crc_data),CRC_STRUCT,uctypes.LITTLE_ENDIAN)
 generateCRCTable(crc_data)
+
+# Define CRC struct
+ownship_data = bytes(uctypes.sizeof(TRAFFIC_STRUCT,uctypes.LITTLE_ENDIAN))
+
+ap = startConfigAP(config_ap_ssid)
+s = connectSkyEcho(skyecho_ssid,skyecho_pwd)
 
 while True:
     raw_data = s.recv(2048)
-    messages = parseRaw(raw_data,crc_data)
+    messages = parseRawGDL90(raw_data,crc_data)
     for message in messages:
-        print(message.track)
+        if message.id == OWNSHIP_ID:
+            ownship_data = message
+            OWNSHIP_POPULATED_FLAG = True
+        elif message.id == TRAFFIC_ID and OWNSHIP_POPULATED_FLAG:
+            print(genNMEATrafficMessage(message,ownship_data))
