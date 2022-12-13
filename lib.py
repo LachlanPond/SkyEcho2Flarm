@@ -2,6 +2,7 @@ import uctypes
 import math
 import network
 import socket
+import binascii
 
 FLAG_BYTE = 0x7E
 CONTROL_ESC_BYTE = 0x7D
@@ -57,10 +58,11 @@ def validateCRC(message,crc,crc_struct):
     return True if crc_struct.crc == crc[1] << 8 | crc[0] else False
 
 def generateNMEACRC(nmea):
-    crc = nmea[0]
-    for byte in nmea[1:-1]:
+    nmea_bytes = bytes(nmea,'utf-8')
+    crc = nmea_bytes[0]
+    for byte in nmea_bytes[1:-1]:
         crc = crc ^ byte
-    return crc
+    return hex(crc >> 3)[-1] + hex(crc & 15)[-1]
 
 def parseMessage(raw_message,crc_struct):
     message = raw_message[1:-3]
@@ -93,10 +95,10 @@ def parseRawGDL90(raw_data,crc_struct):
         i += 1
     return messages
 
-def getRelNorth(lat_traffic,lat_own):
+def getRelNorth(lat_traffic_raw,lat_own_raw):
     # Convert from 24-bit signed int to degrees
-    lat_traffic = getTwosComplement(lat_traffic,24) * (180/2**24)
-    lat_own = getTwosComplement(lat_own,24) * (180/2**24)
+    lat_traffic = getTwosComplement(lat_traffic_raw,24) * (180/2**24)
+    lat_own = getTwosComplement(lat_own_raw,24) * (180/2**24)
 
     # Convert to radians for Haversine formula
     lat_traffic = math.radians(lat_traffic)
@@ -114,20 +116,12 @@ def getRelNorth(lat_traffic,lat_own):
     else:
         return -d
 
-def getRelEast(lat_traffic,lon_traffic,lat_own,lon_own):
+def getRelEast(lat_traffic_raw,lon_traffic_raw,lat_own_raw,lon_own_raw):
     # Convert from 24-bit signed int to degrees
-    lat_traffic = getTwosComplement(lat_traffic,24) * (180/2**24)
-    lon_traffic = getTwosComplement(lon_traffic,24) * (180/2**24)
-    lat_own = getTwosComplement(lat_own,24) * (180/2**24)
-    lon_own = getTwosComplement(lon_own,24) * (180/2**24)
-    print("Lat own:",end=" ")
-    print(str(lat_own),end=" ")
-    print("Lon own:",end=" ")
-    print(str(lon_own),end=" ")
-    print("Lat traffic:",end=" ")
-    print(str(lat_traffic),end=" ")
-    print("lon traffic:",end=" ")
-    print(str(lon_traffic),end=" ")
+    lat_traffic = getTwosComplement(lat_traffic_raw,24) * (180/2**24)
+    lon_traffic = getTwosComplement(lon_traffic_raw,24) * (180/2**24)
+    lat_own = getTwosComplement(lat_own_raw,24) * (180/2**24)
+    lon_own = getTwosComplement(lon_own_raw,24) * (180/2**24)
 
     # Convert to radians for Haversine formula
     lat_traffic = math.radians(lat_traffic)
@@ -148,8 +142,11 @@ def getRelEast(lat_traffic,lon_traffic,lat_own,lon_own):
     else:
         return -d
 
-def getRelVert(target_alt, own_alt):
-    rel_alt = (target_alt - own_alt) * 25 - 1000
+def getRelVert(traffic_alt_raw, own_alt_raw):
+    traffic_alt = traffic_alt_raw * 25 - 1000
+    print("Traffic Alt: " + str(traffic_alt))
+    own_alt = own_alt_raw * 25 - 1000
+    rel_alt = (traffic_alt - own_alt)
     rel_alt = min(rel_alt,32767)
     rel_alt = max(rel_alt,-32768)
     return rel_alt
@@ -166,10 +163,12 @@ def getTrack(track):
     return round(track * (360/256))
 
 def getGroundSpeed(horizontal_velocity):
-    return round(horizontal_velocity * KNOTS_MS_CONVERSION_FACTOR)
+    print(horizontal_velocity/2)
+    print(round((horizontal_velocity * KNOTS_MS_CONVERSION_FACTOR)/2))
+    return round((horizontal_velocity * KNOTS_MS_CONVERSION_FACTOR)/2)
 
-def getClimbRate(vertical_velocity):
-    vertical_velocity = vertical_velocity * VERTICAL_VEL_CONVERSTION_FACTOR
+def getClimbRate(vertical_velocity_raw):
+    vertical_velocity = getTwosComplement(vertical_velocity_raw,12) * VERTICAL_VEL_CONVERSTION_FACTOR
     # Convert ft/min to m/min
     climb_rate = vertical_velocity * FT_M_CONVERSION_FACTOR
     # Convert m/min to m/s
@@ -229,7 +228,7 @@ def genNMEATrafficMessage(traffic_data,ownship_data):
 
     crc = generateNMEACRC(nmea)
 
-    nmea = "$" + nmea + "*" + hex(crc)
+    nmea = "$" + nmea + "*" + crc
 
     return nmea
 
@@ -250,9 +249,18 @@ def connectSkyEcho(ssid,pwd):
     s.bind(addr)
     return s
 
-def startConfigAP(config_ssid):
-    print("starting config AP...")
-    ap = network.WLAN(network.AP_IF)
-    ap.active(True)
-    #ap.config(ssid=config_ssid)
-    return ap
+def printTrafficData(traffic,ownship):
+    callsign = ""
+    i = 7
+    while i > 0:
+        callsign = callsign + chr((traffic.call_sign >> i*8) & 0xFF)
+        i -= 1
+    print("Call Sign:" + callsign)
+    print("Rel North: " + str(getRelNorth(traffic.lat,ownship.lat)))
+    print("Rel East: " + str(getRelEast(traffic.lat,traffic.lon,ownship.lat,ownship.lon)))
+    print("Rel Vert: " + str(getRelVert(traffic.altitude,ownship.altitude)))
+    print("My Alt " + str((ownship.altitude * 25) - 1000))
+    print("Track: " + str(getTrack(traffic.track)))
+    print("Ground Speed: " + str(getGroundSpeed(traffic.horizontal_velocity)))
+    print("Climb Rate: " + str(getClimbRate(traffic.vertical_velocity)))
+    print("Type: " + str(getAircraftType(traffic.emitter_category)))

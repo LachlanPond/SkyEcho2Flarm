@@ -15,8 +15,6 @@ OWNSHIP_POPULATED_FLAG = False
 skyecho_ssid = "SkyEcho_8189"
 skyecho_pwd = ""
 
-config_ap_ssid = "ADSB2Flarm"
-
 # Define CRC struct
 crc_data = bytes(uctypes.sizeof(CRC_STRUCT,uctypes.LITTLE_ENDIAN))
 crc_data = uctypes.struct(uctypes.addressof(crc_data),CRC_STRUCT,uctypes.LITTLE_ENDIAN)
@@ -25,7 +23,6 @@ generateCRCTable(crc_data)
 # Define CRC struct
 ownship_data = bytes(uctypes.sizeof(TRAFFIC_STRUCT,uctypes.LITTLE_ENDIAN))
 
-ap = startConfigAP(config_ap_ssid)
 s = connectSkyEcho(skyecho_ssid,skyecho_pwd)
 
 while True:
@@ -37,3 +34,4 @@ while True:
             OWNSHIP_POPULATED_FLAG = True
         elif message.id == TRAFFIC_ID and OWNSHIP_POPULATED_FLAG:
             print(genNMEATrafficMessage(message,ownship_data))
+            printTrafficData(message,ownship_data)
