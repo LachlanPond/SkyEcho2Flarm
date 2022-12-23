@@ -4,16 +4,17 @@ import uctypes
 import socket
 import binascii
 import micropython
+import json
+import io
 import sys
 from lib import *
+
+config = json.load(io.open("config.json"))
 
 OWNSHIP_ID = 0xA
 TRAFFIC_ID = 0x14
 
 OWNSHIP_POPULATED_FLAG = False
-
-skyecho_ssid = "SkyEcho_8189"
-skyecho_pwd = ""
 
 # Define CRC struct
 crc_data = bytes(uctypes.sizeof(CRC_STRUCT,uctypes.LITTLE_ENDIAN))
@@ -23,7 +24,7 @@ generateCRCTable(crc_data)
 # Define CRC struct
 ownship_data = bytes(uctypes.sizeof(TRAFFIC_STRUCT,uctypes.LITTLE_ENDIAN))
 
-s = connectSkyEcho(skyecho_ssid,skyecho_pwd)
+s = connectSkyEcho(config["skyecho_ssid"],config["skyecho_pwd"])
 
 while True:
     raw_data = s.recv(2048)
