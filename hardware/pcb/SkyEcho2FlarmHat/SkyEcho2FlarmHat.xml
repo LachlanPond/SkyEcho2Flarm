@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/lachlan/Documents/Projects/SkyEcho2Flarm/hardware/pcb/SkyEcho2FlarmHat/SkyEcho2FlarmHat.kicad_sch</source>
+    <date>Fri 30 Dec 2022 12:55:13</date>
+    <tool>Eeschema 6.0.6-3a73a75311~116~ubuntu21.10.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>SkyEcho2Flarm ESP8266 Hat</title>
+        <company/>
+        <rev>0.1</rev>
+        <date/>
+        <source>SkyEcho2FlarmHat.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>44bc2a76-f515-4654-96ee-88731d01a968</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>72b5daf5-f5b0-448d-8e2f-acc4ea32cdfd</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f51e5f56-3fed-4b33-ac1a-6b16d50742e7</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>470nF</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d5eb2a85-e91a-404e-91f1-d84073079f45</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>470nF</value>
+      <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6bc76b45-d15e-442f-95d3-3970857da625</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cb910757-6ab0-4241-8863-23ad7f949ab1</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cf297aff-785e-4ac9-b095-73093167ccae</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b12e96df-ba1e-486c-93bb-8a55444b2496</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c9b55831-3ff6-48a0-9ad2-694da2a92425</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>98d0186f-3b7d-42dc-b848-326bb5cf8c66</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>PWR</value>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>52ed8300-7a8a-4a27-9ed9-c6036ccecb84</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>TX</value>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2623726d-119a-4a06-b317-778fb62f951a</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>RX</value>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b3c4cde8-c1dd-445c-b879-1579a4929406</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>BATT_JACK</value>
+      <footprint>Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002</footprint>
+      <libsource lib="Connector" part="Barrel_Jack" description="DC Barrel Jack"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>621a53a5-9d45-4c40-9a4e-2f5ec915d608</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>DISP_RJ12</value>
+      <footprint>My_Library:RJ12_CUI_CRJ030</footprint>
+      <libsource lib="Connector" part="RJ12" description="RJ connector, 6P6C (6 positions 6 connected)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>46de31a1-6a10-4d1f-aadb-392b189675d1</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>FLARM_RJ12</value>
+      <footprint>My_Library:RJ12_CUI_CRJ030</footprint>
+      <libsource lib="Connector" part="RJ12" description="RJ connector, 6P6C (6 positions 6 connected)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>87e406ec-1391-4576-a6a4-04227dff5142</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>50</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8cece479-b5e5-43a2-b86f-87981f1fb78a</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>50</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e30d5af2-c8f0-47e4-9726-9cf307c2977d</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>BA033CC0FP-E2</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-3_TabPin4</footprint>
+      <libsource lib="My_Library" part="BA033CC0FP-E2" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5fa39bea-c740-42bc-a35d-a9e97696c92b</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>MAX3221</value>
+      <footprint>Package_SO:TSSOP-16_4.4x5mm_P0.65mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/max3221.pdf</datasheet>
+      <libsource lib="Interface_UART" part="MAX3221" description="RS232 transceiver with 15kV ESD protection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cb99fa81-5ec0-467b-9eb2-874ff68fcdad</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>ESP8266_D1_MINI</value>
+      <footprint>Module:WEMOS_D1_mini_light</footprint>
+      <datasheet>https://wiki.wemos.cc/products:d1:d1_mini#documentation</datasheet>
+      <libsource lib="MCU_Module" part="WeMos_D1_mini" description="32-bit microcontroller module with WiFi"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="SkyEcho2FlarmHat.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a8c72e6f-760c-4080-b85b-8baece8262bb</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Barrel_Jack">
+      <description>DC Barrel Jack</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>BarrelJack*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Barrel_Jack</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="RJ12">
+      <description>RJ connector, 6P6C (6 positions 6 connected)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>6P6C*</fp>
+        <fp>RJ12*</fp>
+        <fp>RJ18*</fp>
+        <fp>RJ25*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">RJ12</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="5" name="" type="passive"/>
+        <pin num="6" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Interface_UART" part="MAX3221">
+      <description>RS232 transceiver with 15kV ESD protection</description>
+      <docs>http://www.ti.com/lit/ds/symlink/max3221.pdf</docs>
+      <footprints>
+        <fp>SSOP*</fp>
+        <fp>TSSOP*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MAX3221</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/max3221.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~{EN}" type="input"/>
+        <pin num="2" name="C1+" type="passive"/>
+        <pin num="3" name="V+" type="power_out"/>
+        <pin num="4" name="C1-" type="passive"/>
+        <pin num="5" name="C2+" type="passive"/>
+        <pin num="6" name="C2-" type="passive"/>
+        <pin num="7" name="V-" type="power_out"/>
+        <pin num="8" name="RIN" type="input"/>
+        <pin num="9" name="ROUT" type="output"/>
+        <pin num="10" name="~{INVALID}" type="output"/>
+        <pin num="11" name="DIN" type="input"/>
+        <pin num="12" name="FORCEON" type="input"/>
+        <pin num="13" name="DOUT" type="output"/>
+        <pin num="14" name="GND" type="power_in"/>
+        <pin num="15" name="VCC" type="power_in"/>
+        <pin num="16" name="~{FORCEOFF}" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_Module" part="WeMos_D1_mini">
+      <description>32-bit microcontroller module with WiFi</description>
+      <docs>https://wiki.wemos.cc/products:d1:d1_mini#documentation</docs>
+      <footprints>
+        <fp>WEMOS*D1*mini*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">WeMos_D1_mini</field>
+        <field name="Footprint">Module:WEMOS_D1_mini_light</field>
+        <field name="Datasheet">https://wiki.wemos.cc/products:d1:d1_mini#documentation</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~{RST}" type="input"/>
+        <pin num="2" name="A0" type="input"/>
+        <pin num="3" name="D0" type="bidirectional"/>
+        <pin num="4" name="SCK/D5" type="bidirectional"/>
+        <pin num="5" name="MISO/D6" type="bidirectional"/>
+        <pin num="6" name="MOSI/D7" type="bidirectional"/>
+        <pin num="7" name="CS/D8" type="bidirectional"/>
+        <pin num="8" name="3V3" type="power_out"/>
+        <pin num="9" name="5V" type="power_in"/>
+        <pin num="10" name="GND" type="power_in"/>
+        <pin num="11" name="D4" type="bidirectional"/>
+        <pin num="12" name="D3" type="bidirectional"/>
+        <pin num="13" name="SDA/D2" type="bidirectional"/>
+        <pin num="14" name="SCL/D1" type="bidirectional"/>
+        <pin num="15" name="RX" type="input"/>
+        <pin num="16" name="TX" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="My_Library" part="BA033CC0FP-E2">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BA033CC0FP-E2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="3" name="OUT" type="power_out"/>
+        <pin num="4" name="FIN" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/symbols//Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="Interface_UART">
+      <uri>/usr/share/kicad/symbols//Interface_UART.kicad_sym</uri>
+    </library>
+    <library logical="MCU_Module">
+      <uri>/usr/share/kicad/symbols//MCU_Module.kicad_sym</uri>
+    </library>
+    <library logical="My_Library">
+      <uri>/home/lachlan/.local/share/kicad/6.0/symbols/My_Library.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3.3V">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="OUT" pintype="power_out"/>
+      <node ref="U2" pin="12" pinfunction="FORCEON" pintype="input"/>
+      <node ref="U2" pin="15" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U2" pin="16" pinfunction="~{FORCEOFF}" pintype="input"/>
+      <node ref="U3" pin="8" pinfunction="3V3" pintype="power_out"/>
+    </net>
+    <net code="2" name="+BATT">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pintype="passive"/>
+      <node ref="J2" pin="6" pintype="passive"/>
+      <node ref="J3" pin="6" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="VCC" pintype="power_in"/>
+    </net>
+    <net code="3" name="DISP_RS232_TX">
+      <node ref="J2" pin="3" pintype="passive"/>
+      <node ref="U2" pin="13" pinfunction="DOUT" pintype="output"/>
+    </net>
+    <net code="4" name="DISP_TTL_TX">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U2" pin="11" pinfunction="DIN" pintype="input"/>
+      <node ref="U3" pin="16" pinfunction="TX" pintype="output"/>
+    </net>
+    <net code="5" name="FLARM_RS232_RX">
+      <node ref="J3" pin="2" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="RIN" pintype="input"/>
+    </net>
+    <net code="6" name="FLARM_TTL_RX">
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U2" pin="9" pinfunction="ROUT" pintype="output"/>
+      <node ref="U3" pin="15" pinfunction="RX" pintype="input"/>
+    </net>
+    <net code="7" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="2" pintype="passive"/>
+      <node ref="J2" pin="1" pintype="passive"/>
+      <node ref="J3" pin="1" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="FIN" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="~{EN}" pintype="input"/>
+      <node ref="U2" pin="14" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="10" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="8" name="Net-(C2-Pad1)">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="C1+" pintype="passive"/>
+    </net>
+    <net code="9" name="Net-(C2-Pad2)">
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="C1-" pintype="passive"/>
+    </net>
+    <net code="10" name="Net-(C3-Pad1)">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="C2+" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(C3-Pad2)">
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="C2-" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(C7-Pad1)">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="V+" pintype="power_out"/>
+    </net>
+    <net code="13" name="Net-(C8-Pad2)">
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="V-" pintype="power_out"/>
+    </net>
+    <net code="14" name="Net-(D2-Pad1)">
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="15" name="Net-(D3-Pad1)">
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="16" name="unconnected-(J2-Pad2)">
+      <node ref="J2" pin="2" pintype="passive+no_connect"/>
+    </net>
+    <net code="17" name="unconnected-(J2-Pad4)">
+      <node ref="J2" pin="4" pintype="passive+no_connect"/>
+    </net>
+    <net code="18" name="unconnected-(J2-Pad5)">
+      <node ref="J2" pin="5" pintype="passive+no_connect"/>
+    </net>
+    <net code="19" name="unconnected-(J3-Pad3)">
+      <node ref="J3" pin="3" pintype="passive+no_connect"/>
+    </net>
+    <net code="20" name="unconnected-(J3-Pad4)">
+      <node ref="J3" pin="4" pintype="passive+no_connect"/>
+    </net>
+    <net code="21" name="unconnected-(J3-Pad5)">
+      <node ref="J3" pin="5" pintype="passive+no_connect"/>
+    </net>
+    <net code="22" name="unconnected-(U2-Pad10)">
+      <node ref="U2" pin="10" pinfunction="~{INVALID}" pintype="output+no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(U3-Pad1)">
+      <node ref="U3" pin="1" pinfunction="~{RST}" pintype="input+no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(U3-Pad2)">
+      <node ref="U3" pin="2" pinfunction="A0" pintype="input+no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(U3-Pad3)">
+      <node ref="U3" pin="3" pinfunction="D0" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(U3-Pad4)">
+      <node ref="U3" pin="4" pinfunction="SCK/D5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(U3-Pad5)">
+      <node ref="U3" pin="5" pinfunction="MISO/D6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(U3-Pad6)">
+      <node ref="U3" pin="6" pinfunction="MOSI/D7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="29" name="unconnected-(U3-Pad7)">
+      <node ref="U3" pin="7" pinfunction="CS/D8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="30" name="unconnected-(U3-Pad9)">
+      <node ref="U3" pin="9" pinfunction="5V" pintype="power_in+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(U3-Pad11)">
+      <node ref="U3" pin="11" pinfunction="D4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(U3-Pad12)">
+      <node ref="U3" pin="12" pinfunction="D3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(U3-Pad13)">
+      <node ref="U3" pin="13" pinfunction="SDA/D2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(U3-Pad14)">
+      <node ref="U3" pin="14" pinfunction="SCL/D1" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>

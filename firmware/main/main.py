@@ -16,12 +16,12 @@ TRAFFIC_ID = 0x14
 
 OWNSHIP_POPULATED_FLAG = False
 
-# Define CRC struct
+# Initialize CRC struct
 crc_data = bytes(uctypes.sizeof(CRC_STRUCT,uctypes.LITTLE_ENDIAN))
 crc_data = uctypes.struct(uctypes.addressof(crc_data),CRC_STRUCT,uctypes.LITTLE_ENDIAN)
 generateCRCTable(crc_data)
 
-# Define CRC struct
+# Initialize Ownship struct
 ownship_data = bytes(uctypes.sizeof(TRAFFIC_STRUCT,uctypes.LITTLE_ENDIAN))
 
 s = connectSkyEcho(config["skyecho_ssid"],config["skyecho_pwd"])
