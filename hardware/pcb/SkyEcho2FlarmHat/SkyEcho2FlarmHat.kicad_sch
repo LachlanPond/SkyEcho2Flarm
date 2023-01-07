@@ -6,6 +6,7 @@
 
   (title_block
     (title "SkyEcho2Flarm ESP8266 Hat")
+    (date "2022-12-30")
     (rev "0.1")
   )
 

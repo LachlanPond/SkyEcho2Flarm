@@ -349,7 +349,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "unannotated": "error",
@@ -433,8 +433,8 @@
       "model_mode": 0,
       "workbook_filename": ""
     },
-    "page_layout_descr_file": "",
-    "plot_directory": "",
+    "page_layout_descr_file": "${KICAD_USER_TEMPLATE_DIR}/Custom_Basic.kicad_wks",
+    "plot_directory": "./",
     "spice_adjust_passive_values": false,
     "spice_external_command": "spice \"%I\"",
     "subpart_first_id": 65,
@@ -446,5 +446,7 @@
       ""
     ]
   ],
-  "text_variables": {}
+  "text_variables": {
+    "AUTHOR": "Lachlan Pond"
+  }
 }
